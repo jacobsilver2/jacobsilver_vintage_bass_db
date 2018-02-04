@@ -1,3 +1,4 @@
 #!/usr/bin/env ruby
 require './lib/jacobsilver_vintage_bass_db'
+
 JacobsilverVintageBassDb::CLI.new.call

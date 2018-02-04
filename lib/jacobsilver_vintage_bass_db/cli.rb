@@ -4,23 +4,28 @@ class JacobsilverVintageBassDb::CLI
    def call
       puts "Welcome to the Vintage Bass Databass!"
       menu
+      goodbye
    end
 
    def menu
-      puts "Would you like to search by brand, model, or year? (choose a number)"
-      puts "1. Brand"
-      puts "2. Model"
-      puts "3. Year"
-      choice = gets.strip
-      if choice == "1"
-         list_brands
-      elsif choice == "2"
-         list_models
-      elsif choice == "3"
-         list_years
-      else
-         puts "Please try that again."
-         menu
+      choice = nil
+
+      while choice != "exit"
+         puts "Would you like to search by brand, model, or year? (choose a number), or type exit to quit."
+         puts "1. Brand"
+         puts "2. Model"
+         puts "3. Year"
+         choice = gets.strip.downcase
+         case choice
+            when "1"
+               list_brands
+            when "2"
+               list_models
+            when "3"
+               list_years
+            else
+               puts "Please try that again"               
+         end
       end
    end
 
@@ -32,20 +37,21 @@ class JacobsilverVintageBassDb::CLI
          4. Ampeg
          5. Musicman
          DOC
+         @brands = JacobsilverVintageBassDb::Brands.brand
    end
 
    def list_models
       puts <<-DOC.gsub /^\s*/, ''
-         1. model #
-         2. model #
-         3. model #
-         4. model #
-         5. model #
-         6. model #
-         7. model #
-         8. model #
-         9. model #
-         10. model #
+         1. Jazz
+         2. Precision
+         3. Telecaster
+         4. Thunderbird
+         5. EB
+         6. Grabber
+         7. Ripper
+         8. Les Paul
+         9. V
+         10. RD
       DOC
    end
 
@@ -62,6 +68,10 @@ class JacobsilverVintageBassDb::CLI
          9. 1959
          10. 1960
       DOC
+   end
+
+   def goodbye
+      puts "Check ya later!"
    end
 
 end
