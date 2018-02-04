@@ -23,3 +23,16 @@
    - User is presented a list of years the model was manufactured
    - User chooses a year and is presented a description of that specific bass
 
+
+## What is an model?
+   - Has a name
+   - Has a brand
+   - Has a year
+
+## What is a brand?
+   - Has a name
+   - Has a list of models
+
+## What is a Year?
+   - 
+

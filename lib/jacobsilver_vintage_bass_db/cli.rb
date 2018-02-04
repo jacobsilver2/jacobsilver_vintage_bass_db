@@ -30,14 +30,7 @@ class JacobsilverVintageBassDb::CLI
    end
 
    def list_brands
-      puts <<-DOC.gsub /^\s*/, ''
-         1. Rickenbacker
-         2. Fender
-         3. Gibson
-         4. Ampeg
-         5. Musicman
-         DOC
-         @brands = JacobsilverVintageBassDb::Brands.brand
+         @brands = JacobsilverVintageBassDb::Brand.brand
    end
 
    def list_models
