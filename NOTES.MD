@@ -27,7 +27,13 @@
 ## What is an model?
    - Has a name
    - Has a brand
-   - Has a year
+   - Has a list of years manufactured
+
+## What is a specific model?
+   - Has a name
+   - Has a brand
+   - Has a year manufactured
+   - Has a description
 
 ## What is a brand?
    - Has a name

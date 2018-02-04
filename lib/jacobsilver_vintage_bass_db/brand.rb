@@ -1,13 +1,13 @@
 class JacobsilverVintageBassDb::Brand
    attr_accessor :name, :models
    def self.brand
-      puts <<-DOC.gsub /^\s*/, ''
-      1. Rickenbacker
-      2. Fender
-      3. Gibson
-      4. Ampeg
-      5. Musicman
-      DOC
+      # puts <<-DOC.gsub /^\s*/, ''
+      # 1. Rickenbacker
+      # 2. Fender
+      # 3. Gibson
+      # 4. Ampeg
+      # 5. Musicman
+      # DOC
 
       #I should return a bunch of instances of brand
       brand_1 = self.new
@@ -29,7 +29,7 @@ class JacobsilverVintageBassDb::Brand
       brand_5 = self.new
       brand_5.name = "Musicman"
       brand_5.models = ["Stingray", "Sabre"]
-      
+
       [brand_1, brand_2, brand_3, brand_4, brand_5]
    end
 end

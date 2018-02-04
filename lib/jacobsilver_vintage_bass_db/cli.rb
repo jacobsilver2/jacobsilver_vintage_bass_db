@@ -18,6 +18,7 @@ class JacobsilverVintageBassDb::CLI
          choice = gets.strip.downcase
          case choice
             when "1"
+               puts "Choose a brand from the options below (type a number)."
                list_brands
             when "2"
                list_models
@@ -31,21 +32,13 @@ class JacobsilverVintageBassDb::CLI
 
    def list_brands
          @brands = JacobsilverVintageBassDb::Brand.brand
+         @brands.each.with_index(1) {|brand, i| puts "#{i}. #{brand.name}"}
    end
 
    def list_models
-      puts <<-DOC.gsub /^\s*/, ''
-         1. Jazz
-         2. Precision
-         3. Telecaster
-         4. Thunderbird
-         5. EB
-         6. Grabber
-         7. Ripper
-         8. Les Paul
-         9. V
-         10. RD
-      DOC
+      puts "Models: Please choose a number to see a list of years that model was manufactured"
+      @models = JacobsilverVintageBassDb::Model.model
+      @models.each.with_index(1) {|model, i| puts "#{i}. #{model.brand} - #{model.name}"}
    end
 
    def list_years
