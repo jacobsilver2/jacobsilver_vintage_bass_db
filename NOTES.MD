@@ -29,7 +29,7 @@
    - Has a brand
    - Has a list of years manufactured
 
-## What is a specific model?
+## What is an instrument?
    - Has a name
    - Has a brand
    - Has a year manufactured
